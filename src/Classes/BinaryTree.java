@@ -2,8 +2,6 @@
 // Santhosh Karunakaran sxk190182
 
 package Classes;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.*;
 
 public class BinaryTree
 {
