@@ -139,11 +139,8 @@ public class BinaryTree
         }
         return cur;
     }
-    
-    class Main
-    {
-        // Recursive function to calculate the height of a given binary tree
-        public static int height(Node root)
+
+        public int height(Node root)
         {
             // base case: empty tree has a height of 0
             if (root == null) {
@@ -154,20 +151,20 @@ public class BinaryTree
             return 1 + Math.max(height(root.left), height(root.right));
         }
 
-    public void displayTree() {
-        Node currNode = root;
-        Queue<Node> displayQueue = new LinkedBlockingQueue<Node>();
-        displayQueue.add(currNode);
-        while (!displayQueue.isEmpty()) {
-            currNode = displayQueue.poll();
-            if (currNode.getLeft() != null) {
-                displayQueue.add(currNode.getLeft());
+        public void displayTree() {
+            Node currNode = root;
+            Queue<Node> displayQueue = new LinkedBlockingQueue<Node>();
+            displayQueue.add(currNode);
+            while (!displayQueue.isEmpty()) {
+                currNode = displayQueue.poll();
+                if (currNode.getLeft() != null) {
+                    displayQueue.add(currNode.getLeft());
+                }
+                if (currNode.getRight() != null) {
+                    displayQueue.add(currNode.getRight());
+                }
+    
+                System.out.println(currNode.getNum());
             }
-            if (currNode.getRight() != null) {
-                displayQueue.add(currNode.getRight());
-            }
-
-            System.out.println(currNode.getNum());
         }
-    }
 }
