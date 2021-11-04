@@ -139,6 +139,20 @@ public class BinaryTree
         }
         return cur;
     }
+    
+    class Main
+    {
+        // Recursive function to calculate the height of a given binary tree
+        public static int height(Node root)
+        {
+            // base case: empty tree has a height of 0
+            if (root == null) {
+                return 0;
+            }
+
+            // recur for the left and right subtree and consider maximum depth
+            return 1 + Math.max(height(root.left), height(root.right));
+        }
 
     public void displayTree() {
         Node currNode = root;
