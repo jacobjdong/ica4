@@ -5,11 +5,20 @@ package Classes;
 import java.util.*;
 
 public class QueueICA {
-    Node root = null;
+    Node root;
+
+    public QueueICA() {
+        root = null;
+    }
 
     public Node getNode() {
         Node temp = root;
-        root = root.getLeft();
+        if (root.getNext() != null) {
+            root = root.getNext();
+        }
+        else {
+            root = null;
+        }
         return temp;
     }
 
@@ -24,15 +33,12 @@ public class QueueICA {
 	    {  
         	Node cur = root;
                
-       		while (cur != null)
+       		while ((cur != null) && (cur.getNext()) != null)
         	{
-			if (cur.left == null)
-			{
-				cur.left = n;
-				return;
-			}
-        	    cur = cur.left;
+                System.out.println(cur.getNext().getNum());
+        	    cur = cur.getNext();
 		    }
+            cur.setNext(n);
         }
     }
 

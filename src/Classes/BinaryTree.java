@@ -166,7 +166,6 @@ public class BinaryTree
                 if (currNode.getRight() != null) {
                     displayQueue.addNode(currNode.getRight());
                 }
-    
                 System.out.println(currNode.getNum());
             }
         }
