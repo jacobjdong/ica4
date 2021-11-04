@@ -2,6 +2,7 @@
 import java.util.*;
 
 public class QueueICA implements Queue{
+    // add nodes to Queue in breadthfirst order
     Queue<Node<E>> queue = new BinaryTree<Node<E>>();
 
 if(root != null)
@@ -11,7 +12,7 @@ if(root != null)
 
 while(!queue.isEmpty())
     {
-        TreeNode<E> temp = queue.remove();
+        Node<E> temp = queue.remove();
 
         System.out.println(temp);
 
