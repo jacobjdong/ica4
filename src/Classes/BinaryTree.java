@@ -133,9 +133,25 @@ public class BinaryTree
 		    //call delete again to delete the node that was copied
                     delete (cur);
                 }
-                        
 
         }
         return cur;
+    }
+
+    public void displayTree() {
+        Node<Game> currNode = root;
+        Queue<Node<Game>> displayQueue = new LinkedBlockingQueue<Node<Game>>();
+        displayQueue.add(currNode);
+        while (!displayQueue.isEmpty()) {
+            currNode = displayQueue.poll();
+            if (currNode.leftChild != null) {
+                displayQueue.add(currNode.leftChild);
+            }
+            if (currNode.rightChild != null) {
+                displayQueue.add(currNode.rightChild);
+            }
+
+            System.out.println(currNode.toString());
+        }
     }
 }
