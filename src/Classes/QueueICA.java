@@ -21,17 +21,17 @@ public class QueueICA {
             return;
         }
         else
-	{
+	    {  
         	Node cur = root;
                
-       		while (true)
+       		while (cur != null)
         	{
 			if (cur.left == null)
 			{
 				cur.left = n;
 				return;
 			}
-        	        cur = cur.left;
+        	    cur = cur.left;
 		    }
         }
     }
