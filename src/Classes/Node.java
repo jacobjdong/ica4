@@ -8,9 +8,6 @@ public class Node implements Comparable<Node>
     Node(int n)
     { num = n;      }
     
-    Node(char c)
-    { op = c;      }
-    
     public int getNum()
     { return num;   }
     
