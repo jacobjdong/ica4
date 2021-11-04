@@ -2,8 +2,6 @@
 // Santhosh Karunakaran sxk190182
 
 package Classes;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.*;
 
 public class BinaryTree
 {
@@ -156,17 +154,16 @@ public class BinaryTree
 
         public void displayTree() {
             Node currNode = root;
-            Queue<Node> displayQueue = new LinkedBlockingQueue<Node>();
-            displayQueue.add(currNode);
+            QueueICA displayQueue = new QueueICA();
+            displayQueue.addNode(currNode);
             while (!displayQueue.isEmpty()) {
-                currNode = displayQueue.poll();
+                currNode = displayQueue.getNode();
                 if (currNode.getLeft() != null) {
-                    displayQueue.add(currNode.getLeft());
+                    displayQueue.addNode(currNode.getLeft());
                 }
                 if (currNode.getRight() != null) {
-                    displayQueue.add(currNode.getRight());
+                    displayQueue.addNode(currNode.getRight());
                 }
-    
                 System.out.println(currNode.getNum());
             }
         }

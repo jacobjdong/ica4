@@ -18,7 +18,6 @@ public class Main {
         createAndAddNode(32,treee);
         createAndAddNode(11,treee);
 
-
         System.out.println("The height is: " + treee.height(treee.getRoot()));
 
         treee.displayTree();

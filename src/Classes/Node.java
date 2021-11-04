@@ -6,7 +6,7 @@ package Classes;
 public class Node implements Comparable<Node>
 {
     int num;
-    Node left = null, right = null;
+    Node left = null, right = null, next = null;
     
     public Node(int n)
     { num = n;      }
@@ -16,6 +16,12 @@ public class Node implements Comparable<Node>
     
     public void setNum(int n)
     {  num = n;  }
+
+    public Node getNext()
+    { return next;  }
+
+    public void setNext(Node n)
+    {  next = n;}
 
     public Node getLeft()
     { return left;  }
