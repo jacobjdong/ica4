@@ -13,6 +13,8 @@ public class Main {
         createAndAddNode(9,treee);
         createAndAddNode(4,treee);
         createAndAddNode(32,treee);
+        createAndAddNode(11,treee);
+
 
         treee.displayTree();
     }
