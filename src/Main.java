@@ -14,7 +14,6 @@ public class Main {
         createAndAddNode(4,treee);
         createAndAddNode(32,treee);
 
-        System.out.println("break between22");
         treee.displayTree();
     }
 
