@@ -1,4 +1,6 @@
-package BinaryTree;
+package Classes;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.*;
 
 public class BinaryTree
 {
@@ -139,16 +141,16 @@ public class BinaryTree
     }
 
     public void displayTree() {
-        Node<Game> currNode = root;
-        Queue<Node<Game>> displayQueue = new LinkedBlockingQueue<Node<Game>>();
+        Node currNode = root;
+        Queue<Node> displayQueue = new LinkedBlockingQueue<Node>();
         displayQueue.add(currNode);
         while (!displayQueue.isEmpty()) {
             currNode = displayQueue.poll();
-            if (currNode.leftChild != null) {
-                displayQueue.add(currNode.leftChild);
+            if (currNode.getLeft() != null) {
+                displayQueue.add(currNode.getLeft());
             }
-            if (currNode.rightChild != null) {
-                displayQueue.add(currNode.rightChild);
+            if (currNode.getRight() != null) {
+                displayQueue.add(currNode.getRight());
             }
 
             System.out.println(currNode.toString());

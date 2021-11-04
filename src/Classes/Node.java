@@ -1,11 +1,11 @@
-package BinaryTree;
+package Classes;
 
 public class Node implements Comparable<Node>
 {
     int num;
     Node left = null, right = null;
     
-    Node(int n)
+    public Node(int n)
     { num = n;      }
     
     public int getNum()
