@@ -1,3 +1,6 @@
+// Jacob Dong jjd180002
+// Santhosh Karunakaran sxk190182
+
 package Classes;
 
 public class Node implements Comparable<Node>
