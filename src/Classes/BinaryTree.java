@@ -167,7 +167,7 @@ public class BinaryTree
                 displayQueue.add(currNode.getRight());
             }
 
-            System.out.println(currNode.toString());
+            System.out.println(currNode.getNum());
         }
     }
 }
